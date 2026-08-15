@@ -1,0 +1,324 @@
+.admin-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.admin-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.admin-header h1 {
+    margin-bottom: 10px;
+}
+
+.admin-header p {
+    color: #666;
+}
+
+.success-message {
+    padding: 15px;
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    background: #e8f5e9;
+    color: #2e7d32;
+
+    text-align: center;
+}
+
+.error-message {
+    padding: 15px;
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    background: #ffebee;
+    color: #c62828;
+
+    text-align: center;
+}
+
+.admin-card {
+    background: white;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.admin-card h2 {
+    margin-bottom: 25px;
+}
+
+.product-form {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group:nth-child(2),
+.form-group:nth-child(5) {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group small {
+    color: #777;
+}
+
+.form-buttons {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    gap: 15px;
+}
+
+.add-product-button,
+.cancel-button {
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.add-product-button {
+    background: #222;
+    color: white;
+}
+
+.add-product-button:hover {
+    opacity: 0.85;
+}
+
+.add-product-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+.cancel-button {
+    background: #ddd;
+    color: #222;
+}
+
+.product-list-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.product-list-header span {
+    color: #666;
+}
+
+.no-products {
+    text-align: center;
+
+    padding: 40px;
+
+    color: #777;
+}
+
+.admin-product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.admin-product-card {
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: white;
+}
+
+.admin-product-image {
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f5f5;
+
+    overflow: hidden;
+}
+
+.admin-product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.no-image {
+    color: #888;
+}
+
+.admin-product-info {
+    padding: 18px;
+}
+
+.admin-product-info h3 {
+    margin-bottom: 10px;
+}
+
+.admin-product-info p {
+    color: #666;
+
+    font-size: 14px;
+
+    min-height: 40px;
+}
+
+.product-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin: 15px 0;
+}
+
+.product-details strong {
+    font-size: 20px;
+}
+
+.product-details span {
+    color: #666;
+}
+
+.admin-actions {
+    display: flex;
+
+    gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+    flex: 1;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.edit-button {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.delete-button {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    opacity: 0.8;
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+
+    .admin-product-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .product-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group:nth-child(2),
+    .form-group:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .form-buttons {
+        grid-column: auto;
+
+        flex-direction: column;
+    }
+
+    .admin-product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-card {
+        padding: 20px;
+    }
+
+}
